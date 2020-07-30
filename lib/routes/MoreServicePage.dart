@@ -12,9 +12,14 @@ class MoreServicePage extends StatefulWidget {
 
 class MoreServiceState extends State<MoreServicePage> {
   MoreServiceState() {
-    getIcon();
+
   }
   Map<String, List<AppItemInfo>> groupMaps;
+
+  @override
+  initStates(){
+    getIcon();
+  }
 
   getIcon() async {
     Response response;

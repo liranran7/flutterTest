@@ -4,6 +4,7 @@ import 'package:flutter_app_hello/state/stateManager.dart';
 import 'package:flutter_app_hello/state/mutiState.dart';
 import  'package:flutter_app_hello/widgets/NextItem.dart';
 import 'package:flutter_app_hello/routes/MoreServicePage.dart';
+import 'package:flutter_app_hello/routes/MainHome.dart';
 
 void main() => runApp(MyHomePage());
 
@@ -56,7 +57,7 @@ class MyHomePage extends StatelessWidget {
     return new MaterialApp(
 //        showSemanticsDebugger:true,//此作用是干啥的
         debugShowCheckedModeBanner:false,
-        home:MoreServicePage(),
+        home:MainHome(),
     );
   }
 }
