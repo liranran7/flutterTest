@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter_app_hello/models/AppInfo.dart';
@@ -58,13 +56,22 @@ class MoreServiceState extends State<MoreServicePage> {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-        body: ListView.builder(
-      // itemCount: groupMaps==null||groupMaps.length==0?0:groupMaps.length,
-      itemCount: groupMaps?.length ?? 0, //?.判空  ??判断前面是否是空，如果是空的话取后面的值，否则取前面
-      itemBuilder: (BuildContext context, int index) {
-        return CategoryIcon(categoryList: groupMaps[groupMaps.keys.elementAt(index)]);
-      },
-    ));
+      appBar: AppBar(leading: Icon(Icons.arrow_back,color: Colors.blue,),
+        backgroundColor:Colors.white,
+        title: Text("更多服务",style: TextStyle(color: Colors.blue,fontSize: 20),),
+        centerTitle: true,
+      ),
+        body: Container(
+          color: Color(0xfff2f7fc),
+          child: ListView.builder(
+            shrinkWrap: true,
+            // itemCount: groupMaps==null||groupMaps.length==0?0:groupMaps.length,
+            itemCount: groupMaps?.length ?? 0, //?.判空  ??判断前面是否是空，如果是空的话取后面的值，否则取前面
+            itemBuilder: (BuildContext context, int index) {
+              return CategoryIcon(categoryList: groupMaps[groupMaps.keys.elementAt(index)]);
+            },
+          ),
+        ));
   }
 }
 

@@ -54,6 +54,8 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return new MaterialApp(
+//        showSemanticsDebugger:true,//此作用是干啥的
+        debugShowCheckedModeBanner:false,
         home:MoreServicePage(),
     );
   }
