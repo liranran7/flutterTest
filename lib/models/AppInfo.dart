@@ -9,7 +9,7 @@ class AppInfo {
 
     factory AppInfo.fromJson(Map<String, dynamic> json) {
         return AppInfo(
-            data: json['`data`'] != null ? (json['`data`'] as List).map((i) => AppItemInfo.fromJson(i)).toList() : null,
+            data: json['data'] != null ? (json['data'] as List).map((i) => AppItemInfo.fromJson(i)).toList() : null,
             code: json['code'],
 //            message: json['message'] != null ? Object.fromJson(json['message']) : null,
             status: json['status'],
@@ -21,7 +21,7 @@ class AppInfo {
         data['code'] = this.code;
         data['status'] = this.status;
         if (this.data!= null) {
-            data['`data`'] = this.data.map((v) => v.toJson()).toList();
+            data['data'] = this.data.map((v) => v.toJson()).toList();
         }
 //        if (this.message != null) {
 //            data['message'] = this.message.toJson();
